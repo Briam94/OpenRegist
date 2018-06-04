@@ -14,5 +14,21 @@
         <item>T-2</item>
         <item>T-3</item>
     </string-array>
+
+    <string-array name="parentesco">
+        <item>-parentesco-</item>
+        <item>padre</item>
+        <item>madre</item>
+        <item>hermano</item>
+        <item>tio</item>
+        <item>abuelo</item>
+        <item>abuela</item>
+        <item>primo</item>
+        <item>conyuge</item>
+        <item>novia</item>
+        <item>novio</item>
+        <item>hijo</item>
+        <item>hija</item>
+    </string-array>
 </resources>
 

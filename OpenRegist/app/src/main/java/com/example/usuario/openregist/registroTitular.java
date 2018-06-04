@@ -1,6 +1,7 @@
 package com.example.usuario.openregist;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -68,5 +69,8 @@ public class registroTitular extends AppCompatActivity {
         cedulaTitular.setText("");
         edadTitular.setText("");
         fechaNacimientoTitular.setText("");
+
+        Intent i = new Intent(getApplicationContext(), registroAsegurado.class);
+        startActivity(i);
     }
 }
