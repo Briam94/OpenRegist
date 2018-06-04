@@ -1,6 +1,7 @@
 package com.example.usuario.openregist;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,6 +37,14 @@ public class registroAsegurado extends AppCompatActivity {
 
         idAsegurado.setText(registroTitular.id);
         idAsegurado.setEnabled(false);
+
+        btnTerminarRegistroAsegurado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), dashBoard.class);
+                startActivity(i);
+            }
+        });
 
         btnRegistrarAsegurado.setOnClickListener(new View.OnClickListener() {
             @Override

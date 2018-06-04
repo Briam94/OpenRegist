@@ -39,4 +39,13 @@ public class Utilidades {
     public static final String CREAR_TABLA_ASEGURADO = "CREATE TABLE " + TABLA_ASEGURADO + " (" + ASEGURADO_ID + " TEXT, "
             + ASEGURADO_NOMBRE + " TEXT, " + ASEGURADO_CEDULA + " TEXT, " + ASEGURADO_EDAD + " TEXT, "
             + ASEGURADO_FECHANACIMIENTO + " TEXT, " + ASEGURADO_PARENTESCO + " TEXT)";
+
+    ///////////TABLA RUTA////////////////////////
+
+    public static final String TABLA_RUTA = "ruta";
+    public static final String RUTA_NOMBRE = "nombreruta";
+    public static final String RUTA_DIRECCION = "direccionruta";
+
+    public static final String CREAR_TABLA_RUTA = "CREATE TABLE " + TABLA_RUTA + " (" + RUTA_NOMBRE + " TEXT, "
+            + RUTA_DIRECCION + " TEXT)";
 }

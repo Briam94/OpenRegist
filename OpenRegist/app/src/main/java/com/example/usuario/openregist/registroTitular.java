@@ -37,6 +37,13 @@ public class registroTitular extends AppCompatActivity {
         btnRegistrarTitular = findViewById(R.id.botonRegistrarTitular);
         btnCancelarRegistroTitular = findViewById(R.id.botonCancelarRegistroTitular);
 
+        btnCancelarRegistroTitular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         btnRegistrarTitular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

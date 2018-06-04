@@ -21,7 +21,8 @@
             android:name=".registroTitular"
             android:exported="true" />
         <activity android:name=".dashBoard" />
-        <activity android:name=".registroAsegurado"></activity>
+        <activity android:name=".registroAsegurado" />
+        <activity android:name=".registroRutas"></activity>
     </application>
 
 </manifest>

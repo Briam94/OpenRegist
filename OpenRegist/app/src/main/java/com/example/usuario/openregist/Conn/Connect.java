@@ -17,6 +17,7 @@ public class Connect extends SQLiteOpenHelper {
         db.execSQL(Utilidades.CREAR_TABLA_USUARIO);
         db.execSQL(Utilidades.CREAR_TABLA_TITULAR);
         db.execSQL(Utilidades.CREAR_TABLA_ASEGURADO);
+        db.execSQL(Utilidades.CREAR_TABLA_RUTA);
     }
 
     @Override
@@ -24,6 +25,7 @@ public class Connect extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS usuarios");
         db.execSQL("DROP TABLE IF EXISTS titulares");
         db.execSQL("DROP TABLE IF EXISTS asegurado");
+        db.execSQL("DROP TABLE IF EXISTS ruta");
         onCreate(db);
     }
 }

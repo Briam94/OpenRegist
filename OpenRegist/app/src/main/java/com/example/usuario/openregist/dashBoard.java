@@ -16,6 +16,16 @@ public class dashBoard extends AppCompatActivity {
 
         botonventa = findViewById(R.id.botonventaplan);
 
+        btnenrutar = findViewById(R.id.botonenrutar);
+
+        btnenrutar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), registroRutas.class);
+                startActivity(i);
+            }
+        });
+
         botonventa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

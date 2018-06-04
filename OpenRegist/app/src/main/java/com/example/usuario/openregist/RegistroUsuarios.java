@@ -32,6 +32,13 @@ public class RegistroUsuarios extends AppCompatActivity {
         campoTelefono = (EditText) findViewById(R.id.campotelefonousuario);
         campoContrasena = (EditText) findViewById(R.id.campocontrasenausuario);
 
+        btnCancelarRegistroUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         btnRegistrarUsuaio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
