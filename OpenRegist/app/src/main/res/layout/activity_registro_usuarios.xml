@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroUsuarios">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REGISTRO DE USUARIOS" />
+
+        <EditText
+            android:id="@+id/camponombreusuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="NOMBRE"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/campocedulausuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="CEDULA"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/campocorreousuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="CORREO"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/campotelefonousuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="TELEFONO"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/campocontrasenausuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="CONTRASEÑA"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/botonregistrarUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REGISTRAR" />
+
+        <Button
+            android:id="@+id/botoncancelaregistrousuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CANCELAR" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
