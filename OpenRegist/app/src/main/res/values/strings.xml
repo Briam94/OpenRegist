@@ -9,14 +9,14 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="planes">
-        <item>-SELECCION-</item>
-        <item>T-1</item>
-        <item>T-2</item>
+        <item>-PLANES-</item>
         <item>T-3</item>
+        <item>T-5</item>
+        <item>T-7</item>
     </string-array>
 
     <string-array name="parentesco">
-        <item>-parentesco-</item>
+        <item>-PARENTESCO-</item>
         <item>padre</item>
         <item>madre</item>
         <item>hermano</item>

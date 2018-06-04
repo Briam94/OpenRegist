@@ -19,6 +19,8 @@ public class registroTitular extends AppCompatActivity {
     EditText planTitular, nombreTitular, cedulaTitular, edadTitular, fechaNacimientoTitular;
     Spinner planes;
 
+    public static String id;
+
     Button btnRegistrarTitular, btnCancelarRegistroTitular;
 
     @Override
@@ -60,6 +62,8 @@ public class registroTitular extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "TITULAR: " + resultado + " Registrado exitosamente",Toast.LENGTH_SHORT).show();
         db.close();
+
+        id = cedulaTitular.getText().toString();
 
         limpiar();
     }

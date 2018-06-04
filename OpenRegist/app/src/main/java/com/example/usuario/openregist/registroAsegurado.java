@@ -34,6 +34,9 @@ public class registroAsegurado extends AppCompatActivity {
         btnRegistrarAsegurado = (Button) findViewById(R.id.botonregistrarasegurado);
         btnTerminarRegistroAsegurado = (Button) findViewById(R.id.botonterminarasegurado);
 
+        idAsegurado.setText(registroTitular.id);
+        idAsegurado.setEnabled(false);
+
         btnRegistrarAsegurado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +52,7 @@ public class registroAsegurado extends AppCompatActivity {
         SQLiteDatabase db = conn.getWritableDatabase();
         ContentValues values = new ContentValues();
 
+        values.put(Utilidades.ASEGURADO_ID, idAsegurado.getText().toString());
         values.put(Utilidades.ASEGURADO_NOMBRE, nombreAsegurado.getText().toString());
         values.put(Utilidades.ASEGURADO_CEDULA, cedulaAsegurado.getText().toString());
         values.put(Utilidades.ASEGURADO_EDAD, edadAsegurado.getText().toString());
