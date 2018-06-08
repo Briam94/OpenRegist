@@ -22,7 +22,8 @@
             android:exported="true" />
         <activity android:name=".dashBoard" />
         <activity android:name=".registroAsegurado" />
-        <activity android:name=".registroRutas"></activity>
+        <activity android:name=".registroRutas" />
+        <activity android:name=".listarRutas"></activity>
     </application>
 
 </manifest>

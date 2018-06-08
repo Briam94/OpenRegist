@@ -18,6 +18,8 @@ public class dashBoard extends AppCompatActivity {
 
         btnenrutar = findViewById(R.id.botonenrutar);
 
+        btnconsultarruta = findViewById(R.id.botonConsultarRuta);
+
         btnenrutar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,6 +32,14 @@ public class dashBoard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), registroTitular.class);
+                startActivity(i);
+            }
+        });
+
+        btnconsultarruta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),listarRutas.class);
                 startActivity(i);
             }
         });

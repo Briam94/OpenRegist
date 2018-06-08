@@ -9,6 +9,10 @@ public class ruta {
         this.direccionEmpresa = direccionEmpresa;
     }
 
+    public ruta() {
+
+    }
+
     public String getNombreEmpresa() {
         return nombreEmpresa;
     }
