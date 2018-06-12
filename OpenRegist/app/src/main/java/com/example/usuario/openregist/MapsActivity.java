@@ -1,7 +1,10 @@
 package com.example.usuario.openregist;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -31,12 +34,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
 
-        if(status== ConnectionResult.SUCCESS) {
+        if (status == ConnectionResult.SUCCESS) {
             SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.map);
             mapFragment.getMapAsync(this);
-        }else{
-            Dialog dialog = GooglePlayServicesUtil.getErrorDialog(status,(Activity) getApplicationContext(),10);
+        } else {
+            Dialog dialog = GooglePlayServicesUtil.getErrorDialog(status, (Activity) getApplicationContext(), 10);
             dialog.show();
         }
     }
@@ -55,7 +58,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        mMap.setMapType(googleMap.MAP_TYPE_NORMAL);
+        //Antut(googleMap);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        /*mMap.setMapType(googleMap.MAP_TYPE_NORMAL);
 
         UiSettings uiSettings = mMap.getUiSettings();
         uiSettings.setScrollGesturesEnabled(true);
@@ -67,6 +78,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         float zoomLevel = 16;
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,zoomLevel));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,zoomLevel));*/
+    }
+
+    public void Antut (GoogleMap googleMap){
+
+        mMap = googleMap;
+        final LatLng punto1 = new LatLng(40.4190531,-3.6936194);
+
+        mMap.addMarker(new MarkerOptions().position(punto1).title("Madrid españa"));
+
+        float zoomLevel = 16;
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(punto1,zoomLevel));
     }
 }
