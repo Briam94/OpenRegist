@@ -16,9 +16,13 @@ public class dashBoard extends AppCompatActivity {
 
         botonventa = findViewById(R.id.botonventaplan);
 
+        btnconsultar = findViewById(R.id.botonconsultar);
+
         btnenrutar = findViewById(R.id.botonenrutar);
 
-        btnconsultarruta = findViewById(R.id.botonConsultarRuta);
+        btnconsultarruta = findViewById(R.id.botonhubicarme);
+
+        btncerrarsesion = findViewById(R.id.button5);
 
         btnenrutar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,8 +43,27 @@ public class dashBoard extends AppCompatActivity {
         btnconsultarruta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),listarRutas.class);
+                Intent i = new Intent(getApplicationContext(),MapsActivity.class);
                 startActivity(i);
+            }
+        });
+
+        btnconsultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), consultar.class);
+                startActivity(i);
+            }
+        });
+
+        btncerrarsesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+                Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(i);
+                System.exit(0);
             }
         });
     }

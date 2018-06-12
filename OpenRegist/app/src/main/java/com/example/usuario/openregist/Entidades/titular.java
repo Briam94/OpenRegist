@@ -12,6 +12,10 @@ public class titular {
         this.fechaNacimientoTitular = fechaNacimientoTitular;
     }
 
+    public titular() {
+
+    }
+
     public String getPlan() {
         return plan;
     }

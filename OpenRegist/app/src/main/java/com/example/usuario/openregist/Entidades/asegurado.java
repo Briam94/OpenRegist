@@ -12,6 +12,10 @@ public class asegurado {
         this.parentescoAsegurado = parentescoAsegurado;
     }
 
+    public asegurado() {
+
+    }
+
     public String getIdAsegurado() {
         return idAsegurado;
     }
