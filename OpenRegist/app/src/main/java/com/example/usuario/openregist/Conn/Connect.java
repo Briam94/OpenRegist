@@ -18,6 +18,7 @@ public class Connect extends SQLiteOpenHelper {
         db.execSQL(Utilidades.CREAR_TABLA_TITULAR);
         db.execSQL(Utilidades.CREAR_TABLA_ASEGURADO);
         db.execSQL(Utilidades.CREAR_TABLA_RUTA);
+        db.execSQL("insert into " + Utilidades.TABLA_USUARIO + " values ('brian','1234','admin@correo.com','1234','admin')");
     }
 
     @Override

@@ -66,6 +66,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.setMapType(googleMap.MAP_TYPE_NORMAL);
+        mMap.getUiSettings().setScrollGesturesEnabled(true);
         /*mMap.setMapType(googleMap.MAP_TYPE_NORMAL);
 
         UiSettings uiSettings = mMap.getUiSettings();
